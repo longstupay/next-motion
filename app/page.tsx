@@ -1,13 +1,10 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Footer, NavBar } from "@/components";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1 className='text-red-400'>hello taiwindcss</h1>
-    </main>
-  )
+    <div>
+      <NavBar />
+      <Footer />
+    </div>
+  );
 }

@@ -50,6 +50,42 @@ pnpm i framer-motion
 
 ## 项目基础目录结构
 
+首先整理脚手架自带的一些文件，然后按照自己的需求进行目录结构的划分
+
+### app目录
+
+初始结构
+
+📦app
+ ┣ 📜globals.css
+ ┣ 📜head.tsx
+ ┣ 📜layout.tsx
+ ┣ 📜page.module.css
+ ┗ 📜page.tsx
+
+整理思路
+
+1. 在根目录下创建styles目录，把globals.css放到styles目录下
+2. 在根目录下创建components目录和sections目录以及utils目录、constants目录
+3. 添加相对应的文件
+
+`mkdir components sections utils constants`
+
+整理后的目录结构
+
+📦utils
+ ┗ 📜motion.ts
+ 📦styles
+ ┣ 📜globals.css
+ ┗ 📜index.ts
+ 📦components
+ ┣ 📜Footer.tsx
+ ┣ 📜index.ts
+ ┗ 📜NavBar.tsx
+ 📦sections
+ ┣ 📜About.tsx
+ ┗ 📜index.ts
+
 
 
 ## Learn More
