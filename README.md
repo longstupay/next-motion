@@ -22,6 +22,36 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## 使用NextJS搭建一个富有交互的首页
+
+主要使用的技术栈有：NextJS、Tailwind、Framer Motion
+
+> NextJS启用实验性的App Dir模式
+
+```yml
+nextjsVersion 13.1.6
+framer-motionVersion 9.0.7
+```
+
+### 安装Tailwind和Framer Motion
+
+```bash
+
+在create-next-app的基础上，安装Tailwind
+
+[TailwindCSS](https://tailwindcss.com/docs/guides/nextjs)
+
+```base
+pnpm install -D tailwindcss postcss autoprefixer
+pnpm exec tailwindcss init -p
+# 随后按官网配置tailwind.config.js
+pnpm i framer-motion
+```
+
+## 项目基础目录结构
+
+
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
