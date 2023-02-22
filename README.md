@@ -56,12 +56,12 @@ pnpm i framer-motion
 
 初始结构
 
-📦app
- ┣ 📜globals.css
- ┣ 📜head.tsx
- ┣ 📜layout.tsx
- ┣ 📜page.module.css
- ┗ 📜page.tsx
+📦app  
+ ┣ 📜globals.css  
+ ┣ 📜head.tsx  
+ ┣ 📜layout.tsx  
+ ┣ 📜page.module.css  
+ ┗ 📜page.tsx  
 
 整理思路
 
@@ -73,18 +73,18 @@ pnpm i framer-motion
 
 整理后的目录结构
 
-📦utils
- ┗ 📜motion.ts
- 📦styles
- ┣ 📜globals.css
- ┗ 📜index.ts
- 📦components
- ┣ 📜Footer.tsx
- ┣ 📜index.ts
- ┗ 📜NavBar.tsx
- 📦sections
- ┣ 📜About.tsx
- ┗ 📜index.ts
+📦utils  
+ ┗ 📜motion.ts  
+ 📦styles  
+ ┣ 📜globals.css  
+ ┗ 📜index.ts  
+ 📦components  
+ ┣ 📜Footer.tsx  
+ ┣ 📜index.ts  
+ ┗ 📜NavBar.tsx  
+ 📦sections  
+ ┣ 📜About.tsx  
+ ┗ 📜index.ts  
 
 
 
