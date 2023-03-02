@@ -1,15 +1,36 @@
+'use client';
+
+import { fadeIn, planetVariants, staggerContainer, textContainer, textVariant2 } from "@/utils/motion";
+import { motion } from "framer-motion";
 import React from "react";
+import { TypeTitleMotion } from "./Explore";
 
 function WhatsNew() {
   return (
     <section className="min-h-[480px] md:mb-16">
-      <div className="flex items-center justify-center gap-3 md:mx-16">
+      <motion.div
+        variants={staggerContainer()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="flex items-center justify-center gap-3 md:mx-16"
+      >
         {/* Text */}
-        <div className="flex-1 min-h-[400px] md:px-8 px-0 mx-4">
-          <p className="text-gray-100 pt-4">| Whats new?</p>
-          <p className="text-6xl leading-relaxed text-white font-extrabold">
+        <motion.div
+          className="flex-1 min-h-[400px] md:px-8 px-0 mx-4"
+          variants={fadeIn("right", "tween", 0.2, 1)}
+        >
+          <motion.p variants={textContainer} className="text-gray-100 pt-4">
+            {TypeTitleMotion("| Whats new?")}
+          </motion.p>
+          <motion.p
+            variants={textVariant2}
+            initial="hidden"
+            whileInView="show"
+            className="text-6xl leading-relaxed text-white font-extrabold"
+          >
             What&lsquo;s new about Metaversus?
-          </p>
+          </motion.p>
           <div className="flex md:gap-24">
             <div className=" space-y-3">
               <div className="w-16 h-16 rounded-3xl bg-gray-600 flex items-center justify-center">
@@ -32,16 +53,16 @@ function WhatsNew() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* Img */}
-        <div className="flex-[0.75] min-h-[400px] md:px-8 px-4 mx-4">
+        <motion.div variants={planetVariants('right')} className="flex-[0.75] min-h-[400px] md:px-8 px-4 mx-4">
           <img
             src="/whats-new.png"
             alt="get-started"
             className="w-[90%] h-[90%] object-contain"
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

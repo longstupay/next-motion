@@ -2,7 +2,8 @@
 
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
-import styles from '../styles/'
+import styles from '../styles/';
+import { navVariants } from '../utils/motion';
 
 function NavBar() {
 
@@ -11,7 +12,11 @@ function NavBar() {
  },[])
 
   return (
-    <motion.nav className={`flex justify-between items-center md:px-16 md:py-8 md:mx-16 text-white`}>
+    <motion.nav
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
+      className={`flex justify-between items-center md:px-16 md:py-8 md:mx-16 text-white`}>
       <div className="">
         <svg
           xmlns="http://www.w3.org/2000/svg"

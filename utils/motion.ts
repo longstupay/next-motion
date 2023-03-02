@@ -15,8 +15,8 @@ export const navVariants = {
       y: 0,
       transition: {
         type: 'spring',
-        stiffness: 80,
-        delay: 1,
+        stiffness: 280,
+        delay: 0.55,
       },
     },
   };
@@ -38,7 +38,7 @@ export const navVariants = {
     },
   });
   
-  export const staggerContainer = (staggerChildren, delayChildren) => ({
+  export const staggerContainer = (staggerChildren?:any, delayChildren?:any) => ({
     hidden: {},
     show: {
       transition: {

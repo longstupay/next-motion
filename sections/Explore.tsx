@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ExploreCard } from "@/components";
+import { staggerContainer, textContainer, textVariant2 } from '../utils/motion';
+
 
 export const exploreWorlds = [
   {
@@ -32,18 +34,41 @@ export const exploreWorlds = [
   },
 ];
 
+
+export const TypeTitleMotion = (text:string) => {
+  return Array.from(text).map((letter, index) => (
+    <motion.span variants={textVariant2} key={index}>
+      {letter === " " ? "\u00A0" : letter}
+    </motion.span>
+  ))
+}
+
+export const TitleText = ({title}:{title:string}) => (
+  <motion.h2
+    variants={textVariant2}
+    initial="hidden"
+    whileInView="show"
+    className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white`}
+  >
+    {title}
+  </motion.h2>
+);
+
 function Explore() {
   const [active, setActive] = useState("world-2");
 
   return (
     <section className="min-h-[480px] text-center md:px-32 sm:px-8 pt-8 mt-8 ">
-      <motion.div className="flex flex-col text-white">
+      <motion.div
+        variants={staggerContainer()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }} 
+        className="flex flex-col text-white">
         {/* text */}
         <div className=" md:px-36 md:mx-16">
-          <p>| The World</p>
-          <p className=" md:text-7xl font-extrabold my-4">
-            Choose the world you want to explore
-          </p>
+          <motion.p variants={textContainer} className="">{TypeTitleMotion("| The World is best")}</motion.p>
+          <TitleText title="Choose the world you want to explore" />
         </div>
         {/* Card */}
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5 md:mx-16">
