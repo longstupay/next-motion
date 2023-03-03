@@ -11,6 +11,7 @@ specifiers:
   eslint-config-next: 13.1.6
   framer-motion: ^9.0.7
   husky: ^8.0.3
+  nanoid: ^4.0.1
   next: 13.1.6
   postcss: ^8.4.21
   react: 18.2.0
@@ -35,6 +36,7 @@ dependencies:
 devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.21
   husky: 8.0.3
+  nanoid: 4.0.1
   postcss: 8.4.21
   tailwindcss: 3.2.7_postcss@8.4.21
 
@@ -1788,6 +1790,12 @@ packages:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  /nanoid/4.0.1:
+    resolution: {integrity: sha512-udKGtCCUafD3nQtJg9wBhRP3KMbPglUsgV5JVsXhvyBs/oefqb4sqMEhKBBgqZncYowu58p1prsZQBYvAj/Gww==}
+    engines: {node: ^14 || ^16 || >=18}
+    hasBin: true
+    dev: true
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
