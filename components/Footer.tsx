@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <div className="text-white px-4 sm:px-8 py-2 sm:py-3 bg-sky-700 hover:bg-sky-800 flex ">
+      Footer
+    </div>
+  );
 }
 
-export default Footer
+export default Footer;
