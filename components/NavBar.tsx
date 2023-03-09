@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function NavBar() {
-  return (
-    <div className='text-green-500'>NavBar</div>
-  )
+    return (
+        <div className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">
+            NavBar
+        </div>
+    );
 }
 
-export default NavBar
+export default NavBar;
