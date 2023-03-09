@@ -1,10 +1,18 @@
+import Github from '@/icons/Github';
 import React from 'react';
 
 function NavBar() {
     return (
-        <div className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">
-            NavBar
-        </div>
+        <nav className="fixed inset-2 py-3 px-4">
+            <div className="flex items-center justify-between">
+                <div className="text-xl font-extrabold">
+                    <span>Taib UI</span>
+                </div>
+                <div>
+                    <Github className="h-6 w-6 fill-current text-white" />
+                </div>
+            </div>
+        </nav>
     );
 }
 
