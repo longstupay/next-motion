@@ -6,7 +6,8 @@ import Keyboard from '@/icons/Keyboard';
 import MagicBranch from '@/icons/MagicBranch';
 import Prebuilds from '@/icons/Prebuilds';
 import Preview from '@/icons/Preview';
-import React from 'react';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import React, { useRef } from 'react';
 
 const content = [
     {
@@ -42,8 +43,20 @@ const content = [
 ];
 
 function MoreFeatures() {
+    const targetRef = useRef<HTMLDivElement | null>(null);
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+        offset: ['start end', 'end start'],
+    });
+
+    const opacity = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
+    const y = useTransform(scrollYProgress, [0.8, 1], ['0vh', '50vh']);
     return (
-        <section className="mx-auto grid w-full max-w-[120rem] grid-cols-3 gap-40 py-96">
+        <motion.section
+            ref={targetRef}
+            style={{ opacity, y }}
+            className="mx-auto grid w-full max-w-[120rem] grid-cols-3 gap-40 py-96"
+        >
             {content.map(({ icon: Icon, title, text }) => (
                 <div key={title}>
                     <span className="padding-8 mb-4 flex h-32 w-32 items-center justify-center rounded-[1.8rem] bg-[#151515]">
@@ -53,7 +66,7 @@ function MoreFeatures() {
                     <p className="text-md">{text}</p>
                 </div>
             ))}
-        </section>
+        </motion.section>
     );
 }
 
